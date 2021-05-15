@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
-        android:text="Quelle est la couleur que tu préfères ? "
+        android:text="@string/titre_couleur_question"
         android:textSize="18sp"
         android:textStyle="bold"
         android:gravity="center"
@@ -39,7 +39,7 @@
         android:text="Bleu"
         />
     <Button
-        android:id="@+id/btn_choix_stereotype"
+        android:id="@+id/btn_choix_ami"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -47,7 +47,7 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         android:background="@color/cardview_light_background"
-        android:text="Aucune. Quel stéréotype !"
+        android:text="Téléphoner à un ami !"
         />
 
 </LinearLayout>

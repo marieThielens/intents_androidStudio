@@ -2,4 +2,5 @@
     <string name="app_name">intents</string>
     <string name="text_demande_nom">Veuillez entrer votre nom et prenom</string>
     <string name="Button_accueil">Entrer dans l\'application</string>
+    <string name="titre_couleur_question">Bienvenue %s Quelle est la couleur que tu préfères ?</string>
 </resources>
