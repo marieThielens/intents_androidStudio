@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuestionActivity"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/couleur_question_phrase"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:text="Quelle est la couleur que tu préfères ? "
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        />
+
+    <Button
+        android:id="@+id/btn_choix_rose"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:text="Rose"
+        android:textColor="@color/purple_200"
+        android:textSize="20sp" />
+    <Button
+        android:id="@+id/btn_choix_bleu"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="5dp"
+        android:textColor="#2857CA"
+        android:textSize="20sp"
+        android:background="@color/cardview_light_background"
+        android:text="Bleu"
+        />
+    <Button
+        android:id="@+id/btn_choix_stereotype"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="5dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:background="@color/cardview_light_background"
+        android:text="Aucune. Quel stéréotype !"
+        />
+
+</LinearLayout>
