@@ -12,8 +12,8 @@ import android.widget.Toast;
 
 
 public class QuestionActivity extends AppCompatActivity implements View.OnClickListener{
-    private TextView questionCouleur;
-    private Button btnRose, btnBleu, btnAmi;
+    public TextView questionCouleur;
+    public Button btnRose, btnBleu, btnAmi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +33,11 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         String saluer = String.format(getString(R.string.titre_couleur_question), data);
 
        //  Toast.makeText(getApplicationContext(), data , Toast.LENGTH_LONG).show();
+
+        // Ecouter les boutons
+        btnRose.setOnClickListener(this);
+        btnBleu.setOnClickListener(this);
+        btnAmi.setOnClickListener(this);
     }
 
     @Override
@@ -43,11 +48,14 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         } else if (v == btnBleu) {
             Toast.makeText(getApplicationContext(), "Le rose c'est aussi joli" , Toast.LENGTH_LONG).show();
         } else if (v == btnAmi) {
-            Intent intent = new Intent(getApplicationContext(), ConnectActivity.class);
+
+            Intent intent = new Intent(getApplicationContext(), QuestionActivity.class);
             // Téléphoner
             Uri numTelephone = Uri.parse("tel:0494275721");
-            Intent telIntent = new Intent (intent.ACTION_DIAL, numTelephone);
+            Intent telIntent = new Intent(Intent.ACTION_DIAL, numTelephone);
             startActivity(telIntent);
+          //  Toast.makeText(getApplicationContext(), "Le rose c'est aussi joli" , Toast.LENGTH_LONG).show();
+
         }
     }
 }

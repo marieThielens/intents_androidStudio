@@ -35,6 +35,7 @@ public class ConnectActivity extends AppCompatActivity {
                 intent.putExtra("prenom", prenom.getText().toString());
 
                 startActivity(intent);
+                finish();
             }
         });
     }
