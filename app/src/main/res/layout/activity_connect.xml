@@ -10,11 +10,6 @@ tools:context=".ConnectActivity"
 android:orientation="vertical"
     android:gravity="center_horizontal|center_vertical">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fadeScrollbars="false">
-
     <TextView
         android:id="@+id/titre_connect"
         android:layout_width="wrap_content"
@@ -42,7 +37,5 @@ android:orientation="vertical"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:text="Se connecter"/>
-
-    </ScrollView>
 
 </LinearLayout>

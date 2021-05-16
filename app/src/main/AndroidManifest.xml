@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Intents">
         <activity android:name=".QuestionActivity"></activity>
-        <activity android:name=".ConnectActivity" />
+        <activity android:name=".ConnectActivity" android:windowSoftInputMode="adjustResize"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
