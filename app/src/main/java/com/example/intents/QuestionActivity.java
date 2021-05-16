@@ -3,6 +3,7 @@ package com.example.intents;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,22 +30,24 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         Bundle extra = this.getIntent().getExtras();
         String data = extra.getString("nom");
 
-        String.format(getString(R.string.titre_couleur_question), data);
+        String saluer = String.format(getString(R.string.titre_couleur_question), data);
 
        //  Toast.makeText(getApplicationContext(), data , Toast.LENGTH_LONG).show();
     }
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(getApplicationContext(), ConnectActivity.class);
-
 
         if(v == btnRose) {
-
+            Toast.makeText(getApplicationContext(), "Le bleu c'est aussi joli" , Toast.LENGTH_LONG).show();
         } else if (v == btnBleu) {
-
+            Toast.makeText(getApplicationContext(), "Le rose c'est aussi joli" , Toast.LENGTH_LONG).show();
         } else if (v == btnAmi) {
-
+            Intent intent = new Intent(getApplicationContext(), ConnectActivity.class);
+            // Téléphoner
+            Uri numTelephone = Uri.parse("tel:0494275721");
+            Intent telIntent = new Intent (intent.ACTION_DIAL, numTelephone);
+            startActivity(telIntent);
         }
     }
 }
