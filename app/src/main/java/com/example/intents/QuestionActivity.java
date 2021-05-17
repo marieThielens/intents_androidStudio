@@ -30,7 +30,7 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         Bundle extra = this.getIntent().getExtras();
         String data = extra.getString("nom");
 
-        String saluer = String.format(getString(R.string.titre_couleur_question), data);
+        String saluer = String.format(getString(R.string.couleur_question_phrase), data);
 
        //  Toast.makeText(getApplicationContext(), data , Toast.LENGTH_LONG).show();
 

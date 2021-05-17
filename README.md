@@ -120,7 +120,8 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         // récupérer l'intent envoyé depuis connect
         Bundle extra = this.getIntent().getExtras();
         String data = extra.getString("nom");
-
+        
+        // getString(R.string.ect) / android:text="@string/hello" /> . getString permet de retourner un String
         String saluer = String.format(getString(R.string.titre_couleur_question), data);
 
        //  Toast.makeText(getApplicationContext(), data , Toast.LENGTH_LONG).show();
@@ -145,7 +146,6 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
             Uri numTelephone = Uri.parse("tel:0494275721");
             Intent telIntent = new Intent(Intent.ACTION_DIAL, numTelephone);
             startActivity(telIntent);
-          //  Toast.makeText(getApplicationContext(), "Le rose c'est aussi joli" , Toast.LENGTH_LONG).show();
 
         }
     }
