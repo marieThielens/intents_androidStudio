@@ -26,12 +26,14 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         btnBleu = findViewById(R.id.btn_choix_bleu);
         btnAmi = findViewById(R.id.btn_choix_ami);
 
-        // récupérer l'intent envoyé depuis connect
+        // récupérer tous les extras avec la méthode bundle envoyé depuis connect
         Bundle extra = this.getIntent().getExtras();
         String data = extra.getString("nom");
 
+        // getString pcs on recoit un int
         String saluer = String.format(getString(R.string.couleur_question_phrase), data);
-
+        // Injecter mon texte
+        questionCouleur.setText(saluer);
        //  Toast.makeText(getApplicationContext(), data , Toast.LENGTH_LONG).show();
 
         // Ecouter les boutons

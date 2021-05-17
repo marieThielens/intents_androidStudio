@@ -123,7 +123,8 @@ public class QuestionActivity extends AppCompatActivity implements View.OnClickL
         
         // getString(R.string.ect) / android:text="@string/hello" /> . getString permet de retourner un String
         String saluer = String.format(getString(R.string.titre_couleur_question), data);
-
+        // Injecter mon texte
+        questionCouleur.setText(saluer);
        //  Toast.makeText(getApplicationContext(), data , Toast.LENGTH_LONG).show();
 
         // Ecouter les boutons

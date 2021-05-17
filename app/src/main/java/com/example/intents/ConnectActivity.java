@@ -29,8 +29,9 @@ public class ConnectActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-
+                // créer mon intent qui au click va vers QuestionActivity
                 Intent intent = new Intent(getApplicationContext(), QuestionActivity.class);
+                // putExtra ajouter du contenu à mon intent. Clé , valeur
                 intent.putExtra("nom", nom.getText().toString());
                 intent.putExtra("prenom", prenom.getText().toString());
 
